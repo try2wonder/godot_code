@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://ex8vuqlt3ngm"]
+
+[ext_resource type="Script" path="res://scripts/quest.gd" id="1_c8kub"]
+[ext_resource type="Texture2D" uid="uid://b1yc1fjrbhq5d" path="res://assets/art/Magic_bubble.png" id="2_ylvsr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d84n4"]
+size = Vector2(30, 16)
+
+[node name="quest" type="Area2D"]
+script = ExtResource("1_c8kub")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2)
+shape = SubResource("RectangleShape2D_d84n4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_ylvsr")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bhegamiibwrs3"]
+
+[ext_resource type="Texture2D" uid="uid://cv6t5fac0sbx" path="res://assets/art/MageCharSimple.png" id="1_qshp3"]
+[ext_resource type="Script" path="res://scripts/character_body_2d.gd" id="1_y8y0a"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_io34y"]
+radius = 4.0
+height = 20.0
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_y8y0a")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+light_mask = 2
+texture = ExtResource("1_qshp3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4)
+shape = SubResource("CapsuleShape2D_io34y")

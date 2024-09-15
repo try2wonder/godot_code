@@ -1,0 +1,103 @@
+[gd_scene load_steps=2 format=3 uid="uid://k3an1qdumx18"]
+
+[ext_resource type="Texture2D" uid="uid://tl5aflyvlvcb" path="res://icon.svg" id="1_m2lk0"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HSplitContainer" type="HSplitContainer" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 510.0
+split_offset = 820
+
+[node name="PanelContainer" type="PanelContainer" parent="HSplitContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HSplitContainer/PanelContainer"]
+layout_mode = 2
+text = "Left side"
+horizontal_alignment = 1
+
+[node name="PanelContainer2" type="PanelContainer" parent="HSplitContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HSplitContainer/PanelContainer2"]
+layout_mode = 2
+text = "Right side"
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 168.0
+offset_bottom = 168.0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer"]
+layout_mode = 2
+texture = ExtResource("1_m2lk0")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+offset_left = 1.0
+offset_top = 175.0
+offset_right = 190.0
+offset_bottom = 302.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "option 1"
+
+[node name="Label2" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "option 1"
+
+[node name="Label3" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "option 1"
+
+[node name="Label4" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "option 1"
+
+[node name="Label5" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "option 1"
+
+[node name="Label6" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "option 1"
+
+[node name="Label7" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "option 1"
+
+[node name="Label8" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "option 1"
+
+[node name="Label9" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "option 1"
+
+[node name="Label10" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "option 1"
+
+[node name="Label11" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "option 1"
+
+[node name="Label12" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "option 1"
