@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://w6enk1wftvoo"]
+
+[ext_resource type="PackedScene" uid="uid://bhegamiibwrs3" path="res://Scenes/character_body_2d.tscn" id="1_1pinh"]
+[ext_resource type="Texture2D" uid="uid://ca7341mqd4a87" path="res://assets/art/Tile1.png" id="2_ja6wq"]
+[ext_resource type="PackedScene" uid="uid://ex8vuqlt3ngm" path="res://Scenes/quest.tscn" id="3_x1xtb"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_axmdq"]
+texture = ExtResource("2_ja6wq")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-14, -13.5, 13.75, -13.5, 14, 14, -13.75, 14)
+
+[sub_resource type="TileSet" id="TileSet_lpiau"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_axmdq")
+
+[node name="Game" type="Node2D"]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_1pinh")]
+position = Vector2(32, 21)
+collision_layer = 2
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+zoom = Vector2(4, 4)
+limit_bottom = 115
+position_smoothing_enabled = true
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_lpiau")
+format = 2
+layer_0/tile_data = PackedInt32Array(131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 196607, 0, 0, 131070, 0, 0, 65533, 0, 0, 131069, 0, 0, 196605, 0, 0, 196606, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 65541, 0, 0, 5, 0, 0, 65540, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0)
+
+[node name="quest" parent="." instance=ExtResource("3_x1xtb")]
+position = Vector2(100, 50)
+collision_mask = 2
